@@ -1,0 +1,32 @@
+#########################
+# iVAE on RNA (cpQ)     #
+#########################
+
+ROOT: 'data/RNA'
+LOG: 'baseline/results/ivae_rna'
+DATASET: 'prepared_frozendist_v4_cpQ'
+
+NS: TRUE
+MODEL: 'iVAE'
+
+VAE:
+    GPU: [0]
+    CPU: 4
+    TRAIN_BS: 64
+    VAL_BS: 256
+    EPOCHS: 100
+    N_VAL_SAMPLES: 2048
+    INPUT_DIM: 28
+    LATENT_DIM: 4
+    ENC:
+        HIDDEN_DIM: 128
+    DEC:
+        HIDDEN_DIM: 128
+    PIN: TRUE
+
+iVAE:
+    LR: 1.0e-3
+
+MCC:
+    FREQ: 0.1
+    CORR: 'Pearson'

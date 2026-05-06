@@ -1,0 +1,37 @@
+#########################
+# TDRL on tep
+#########################
+
+ROOT: 'data/tep'
+LOG: 'baseline/results/tdrl_tep'
+DATASET: 'prepared'
+
+VAE:
+    GPU: [0]
+    CPU: 4
+    TRAIN_BS: 64
+    VAL_BS: 256
+    EPOCHS: 100
+    N_VAL_SAMPLES: 417
+    NCLASS: 2
+    LAG: 2
+    LENGTH: 1
+    EMBED_DIM: 2
+    INFER_MODE: 'F'
+    TRANS_PRIOR: 'NP'
+    LR: 5.0e-4
+    BETA: 2.0e-3
+    GAMMA: 2.0e-2
+    INPUT_DIM: 52
+    LATENT_DIM: 7
+    BIAS: FALSE
+    ENC:
+        HIDDEN_DIM: 128
+    DEC:
+        HIDDEN_DIM: 128
+        DIST: 'gaussian'
+    PIN: TRUE
+
+MCC:
+    FREQ: 0.1
+    CORR: 'Pearson'

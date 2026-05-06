@@ -1,0 +1,41 @@
+#########################
+# BetaVAE on tep
+#########################
+
+ROOT: 'data/tep'
+LOG: 'baseline/results/bvae_tep'
+DATASET: 'prepared'
+
+NS: TRUE
+MODEL: 'BetaVAE'
+
+VAE:
+    GPU: [0]
+    CPU: 4
+    TRAIN_BS: 64
+    VAL_BS: 256
+    EPOCHS: 100
+    N_VAL_SAMPLES: 417
+    INPUT_DIM: 52
+    LATENT_DIM: 7
+    ENC:
+        HIDDEN_DIM: 128
+    DEC:
+        HIDDEN_DIM: 128
+    PIN: TRUE
+
+BetaVAE:
+    BETA: 8
+    GAMMA: 0
+    RATE_PRIOR: 1
+    beta1_VAE: 0.9
+    beta2_VAE: 0.999
+    LR: 1.0e-4
+
+SlowVAE:
+    beta1_VAE: 0.9
+    beta2_VAE: 0.999
+
+MCC:
+    FREQ: 0.1
+    CORR: 'Pearson'

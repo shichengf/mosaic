@@ -1,0 +1,25 @@
+# Core MOSAIC dependencies. Tested with Python 3.10.
+# For GPU runs, install a torch wheel matching your CUDA version first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+numpy>=1.24,<3.0
+scipy>=1.10
+scikit-learn>=1.2
+torch>=2.0
+pytorch-lightning>=2.0
+matplotlib>=3.6
+pandas>=1.5
+tqdm>=4.60
+
+# Data-prep extras (uncomment what you need)
+# mdtraj>=1.9            # RNA molecular dynamics
+# biopython>=1.80
+# xarray>=2023.1         # ENSO climate (NetCDF)
+# netCDF4>=1.6
+# h5py>=3.7
+# jax>=0.4.0             # synthetic Langevin generator
+# jaxlib>=0.4.0
+
+# Analysis extras
+# seaborn>=0.12
+# umap-learn>=0.5

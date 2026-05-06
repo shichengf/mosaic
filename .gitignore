@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.venv*/
+.pytest_cache/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Experiment artifacts
+experiments/
+results/
+results_*/
+slurm_logs/
+lightning_logs/
+*.ckpt
+wandb/
+
+# Generated data — too large to commit; see scripts/data_prep/
+data/synthetic_well_v2*/raw/
+data/synthetic_well_v2*/source/
+data/*/raw/
+data/*/prepared/data.npz
+data/RNA/RNA_simulations*/
+data/RNA/prepared_*/data.npz
+
+# Plots / heavy outputs
+*.pdf
+*.png
+!docs/**/*.png
+!docs/**/*.pdf
+
+# Local config
+.env
+.envrc

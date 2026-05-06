@@ -1,0 +1,30 @@
+name: mosaic
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy>=1.24
+  - scipy>=1.10
+  - scikit-learn>=1.2
+  - matplotlib>=3.6
+  - pandas>=1.5
+  - tqdm
+  # PyTorch (CUDA 12.1 wheel; remove pytorch-cuda for CPU-only)
+  - pytorch>=2.0
+  - pytorch-cuda=12.1
+  - torchvision
+  - pytorch-lightning>=2.0
+  # Optional: data prep
+  - mdtraj
+  - biopython
+  - xarray
+  - netCDF4
+  - h5py
+  - seaborn
+  - jax
+  - jaxlib
+  - pip:
+      - -e .
